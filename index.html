@@ -4,26 +4,20 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="shortcut icon" href="images/logo.png">	<!-- favicon -->
+	<!-- <meta http-equiv="refresh" content="10"></meta> -->
+
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
 	<link rel="stylesheet" href="css/style.css"></link>
-	<script type="text/javascript">
-		$(document).ready(function(){
-			$('.menu-toggle').click(function(){
-			  $('.menu-toggle').toggleClass('active');
-			$('.navbar').toggleClass('active');
-			});
-			
-			$(".navbar ul li a").hover(function(){
-			$('.icon').toggleClass('color');
-			});
-		});
-	</script>
+
+	
 </head>
 <body>
 	<div class="container">
 		<header>
-			<div class="logo">
+			<!-- Development onclick -->
+			<div class="logo" onclick="location.reload()">
 				<a href="#"> PR<img src="images/logo.png" alt="logo">MPT </a>
 			</div>
 			<div class="menu-toggle"></div>
@@ -39,79 +33,24 @@
 			<div class="clearfix"></div>
 		</header>
 		<div class="content">
-			<div class="bgimage">HEllo EveryONe</div>
+			<div class="bgimage">
+				<span class="head-text">Welcome To Promt!</span>
+			</div>
 			<div class="main-content">
-				Mission
-The following text is placeholder known as “lorem ipsum,” which is scrambled Latin used by designers to mimic real copy. Lorem ipsum dolor sit amet Nullam vel ultricies metus, at tincidunt arcu. Morbi vestibulum, ligula ut efficitur mollis, mi massa accumsan justo, accumsan auctor orci lectus ac ipsum. Proin porta nisl sem, ac suscipit lorem dignissim et. Curabitur euismod nec augue vitae dictum. Nam mattis, massa quis consequat molestie, erat justo vulputate tortor, a sollicitudin turpis felis eget risus. Aliquam viverra urna felis, eu ornare enim consectetur sed. Morbi vitae ultrices velit. Sed molestie consectetur metus. Proin neque eros, dapibus ac accumsansodales sit amet velit. 
-
- 
-
-Goals
-The following text is placeholder known as “lorem ipsum,” which is scrambled Latin used by designers to mimic real copy. Lorem ipsum 
-<br>
-<br>
-
-<br>
-04.
-–
-<br>
-
-<br>
-
-
-<br>
-dolor sit amet Nullam vel ultricies metus, at tincidunt arcu. Morbi vestibulum, ligula ut efficitur mollis, mi massa accumsan justo, accumsan auctor orci lectus ac ipsum. Proin 
-
-<br>
-<br>
-
-<br>
-04.
-–
-<br>
-
-<br>
-
-
-<br>
-porta nisl sem, ac suscipit lorem dignissim et. Curabitur euismod nec augue vitae dictum. Nam mattis, massa quis consequat molestie, erat justo vulputate tortor, a sollicitudin turpis felis eget risus. Aliquam viverra urna felis, eu ornare enim consectetur sed. Morbi vitae ultrices velit. Sed molestie consectetur metus. Proin neque eros, dapibus ac accumsansodales sit amet velit.
-
-01.
-–
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non finibus tellus. Donec laoreet ipsum vel eleifend tempor. Suspendisse eu suscipit enim.
-<br>
-02.
-–
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non finibus tellus. Donec laoreet ipsum vel eleifend tempor.
-<br>
-
-03.
-–
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non finibus tellus. Donec laoreet ipsum vel eleifend tempor. Suspendisse eu suscipit enim. Lorem ipsum dolor sit amet.
-
-
-<br>
-<br>
-
-<br>
-04.
-–
-<br>
-
-<br>
-
-
-<br>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non finibus tellus. Donec laoreet ipsum vel eleifend tempor.
-
-
-				<div class="articles">
-					<div class="col-3"></div>
-					<div class="col-3"></div>
-					<div class="col-3"></div>
-					<div class="col-3"></div>
+				<div class="mission-container">
+					<div class="mission col-1">
+						<img src="./images/hug.gif" class="mission-gif" />
+						<span class="mission-message"></span>
+					</div>
+					<div class="mission col-2">
+						<img src="./images/hug.gif" class="mission-gif" />
+						<span class="mission-message"></span>
+					</div>
+					<div class="mission col-3">
+						<img src="./images/hug.gif" class="mission-gif" />
+						<span class="mission-message"></span>
+					</div>
 				</div>
-				<div class="services"></div>
 			</div>
 		</div>
 		<div class="footer"></div>
@@ -119,3 +58,36 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non finibus tellus.
 	
 </body>
 </html>
+
+<script src="./utils.js"></script>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('.menu-toggle').click(function(){
+		  $('.menu-toggle').toggleClass('active');
+		$('.navbar').toggleClass('active');
+		});
+		
+		$(".navbar ul li a").hover(function(){
+		$('.icon').toggleClass('color');
+		});
+	});
+	document.body.style.background  = backgroundColor;
+	document.querySelector(".bgimage").style.backgroundImage = backgroundImage
+	document.querySelector(".head-text").innerHTML = "This can be anything you want"
+
+	if(document.body.offsetHeight<document.body.offsetWidth){
+	// document.querySelector(".mission").style.height=document.querySelector(".mission").style.width*2;
+	}
+	var missionMessages = [
+		"hello I am mission 1",
+		"hello I am mission 2",
+		"hello I am mission 3"
+	]
+	var s = document.getElementsByClassName("mission-message");
+	missionMessages.forEach((e,i) => {
+		s[i].innerHTML = e;
+		s[i].style.color = "#fff";
+	});
+
+</script>
