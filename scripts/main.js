@@ -9,38 +9,33 @@ $(document).ready(function () {
     $(".icon").toggleClass("color");
   });
 });
+
 document.body.style.background = backgroundColor;
 document.querySelector(".bgimage").style.backgroundImage =
   backgroundImage;
 document.querySelector(".head-text").innerHTML =
-  "This can be anything you want";
+  "Welcome! to the Wikipedia ✌ of BVoc";
 
-if (document.body.offsetHeight < document.body.offsetWidth) {
-  // document.querySelector(".mission").style.height=document.querySelector(".mission").style.width*2;
-}
-var missionMessages = [
-  "hello I am mission 1",
-  "hello I am mission 2",
-  "hello I am mission 3",
-];
 let mission = [
   {
-    imageSrc: String,
-    missionMessage: String,
+    imageSrc: "./images/light-bulb.gif",
+    imageAlt: "Book Gif",
+    missionMessage: "Know Everything about Bachelor of Vocation undergraduate course",
   },
   {
-    imageSrc: String,
-    missionMessage: String,
+    imageSrc: "./images/book.gif",
+    imageAlt: "Light Gif",
+    missionMessage: "Get all the previous year Question Papers and resources for the coursework",
   },
   {
-    imageSrc: String,
-    missionMessage: String,
+    imageSrc: "./images/badge.gif",
+    imageAlt: "Badge Gif",
+    missionMessage: "Learn from Success Stories and Feedbacks from Seniors",
   },
 ];
 
-// var missionImagePath = [  ]
-var s = document.getElementsByClassName("mission-message");
-missionMessages.forEach((e, i) => {
-  s[i].innerHTML = e;
-  s[i].style.color = "#fff";
-});
+mission.map((element,i)=>{
+  document.querySelectorAll(".mission > img")[i].src = element.imageSrc;
+  document.querySelectorAll(".mission > img")[i].alt = element.imageAlt;
+  document.querySelectorAll(".mission > .mission-message")[i].innerHTML = element.missionMessage;
+})

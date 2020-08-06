@@ -1,4 +1,4 @@
-<html>
+<!DOCTYPE html>
 <head>
 	<title>PROMT</title>
 	<meta charset="utf-8">
@@ -24,10 +24,10 @@
 			<nav class="navbar">
 				<ul>
 					<li><a href="#"><i class="fa fa-home icon"></i> Home</a></li>
-					<li><a href="#"><i class="fa fa-handshake-o icon"></i> Services</a></li>
-					<li><a href="#"><i class="fa fa-black-tie icon"></i> About Us</a></li>
-					<li><a href="#"><i class="fa fa-comments icon"></i> QnA</a></li>
-					<li><a href="#"><i class="fa fa-user icon"></i> Login</a></li>
+					<li><a href="#"><i class="fa fa-book icon"></i> Question Paper</a></li>
+					<li><a href="#"><i class="fa fa-pencil-square-o icon"></i> Blog</a></li>
+					<li><a href="#"><i class="fa fa-comments icon"></i> Feedback</a></li>
+					<li><a href="./assets/about.html"><i class="fa fa-user icon"></i> About</a></li>
 				</ul>
 			</nav>
 			<div class="clearfix"></div>
@@ -36,58 +36,48 @@
 			<div class="bgimage">
 				<span class="head-text">Welcome To Promt!</span>
 			</div>
+
 			<div class="main-content">
 				<div class="mission-container">
-					<div class="mission col-1">
-						<img src="./images/hug.gif" class="mission-gif" />
+					<div class="mission">
+						<img class="mission-image" />
 						<span class="mission-message"></span>
 					</div>
-					<div class="mission col-2">
-						<img src="./images/hug.gif" class="mission-gif" />
+					<div class="mission">
+						<img class="mission-image" />
 						<span class="mission-message"></span>
 					</div>
-					<div class="mission col-3">
-						<img src="./images/hug.gif" class="mission-gif" />
+					<div class="mission">
+						<img class="mission-image" />
 						<span class="mission-message"></span>
 					</div>
 				</div>
+				<div class="question-container">
+					<div class="question-paper-cards">
+						<div class="question-paper-card">
+						  Hello every one I am parul sharma
+						</div>
+						<div class="question-paper-card">
+						  Hello every one I am parul sharma
+						</div>
+						<div class="question-paper-card">
+						  Hello every one I am parul sharma
+						</div>
+						<div class="question-paper-card">
+						  Hello every one I am parul sharma
+						</div>
+					</div>
+				</div>
 			</div>
+
 		</div>
 		<div class="footer"></div>
 	</div>
 	
 </body>
+
+<script src="./scripts/utils.js"></script>
+
+<script src="./scripts/main.js" type="text/javascript"></script>
+
 </html>
-
-<script src="./utils.js"></script>
-
-<script type="text/javascript">
-	$(document).ready(function(){
-		$('.menu-toggle').click(function(){
-		  $('.menu-toggle').toggleClass('active');
-		$('.navbar').toggleClass('active');
-		});
-		
-		$(".navbar ul li a").hover(function(){
-		$('.icon').toggleClass('color');
-		});
-	});
-	document.body.style.background  = backgroundColor;
-	document.querySelector(".bgimage").style.backgroundImage = backgroundImage
-	document.querySelector(".head-text").innerHTML = "This can be anything you want"
-
-	if(document.body.offsetHeight<document.body.offsetWidth){
-	// document.querySelector(".mission").style.height=document.querySelector(".mission").style.width*2;
-	}
-	var missionMessages = [
-		"hello I am mission 1",
-		"hello I am mission 2",
-		"hello I am mission 3"
-	]
-	var s = document.getElementsByClassName("mission-message");
-	missionMessages.forEach((e,i) => {
-		s[i].innerHTML = e;
-		s[i].style.color = "#fff";
-	});
-
-</script>
